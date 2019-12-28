@@ -16,7 +16,7 @@ execution for the developer.  Sample usage:
     >>> while not p.is_ready():
     ...     sleep(0.01)
     ...
-    >>> print p.get_result()
+    >>> print (p.get_result())
     250
     >>>
 
@@ -30,7 +30,7 @@ __license__ = 'MIT'
 
 
 from threading import Event, Lock, Thread
-from Queue import Queue, Empty
+from queue import Queue, Empty
 from datetime import datetime
 from time import sleep
 

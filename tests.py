@@ -143,8 +143,8 @@ class TestPromiseKeeper(TestCase):
         pk = PromiseKeeper(iterator=tester.generator())
         
         while pk.is_running():
-            x = filter(lambda x: x.is_ready(), tester.promises)
-            print len(x), x
+            x = list(filter(lambda x: x.is_ready(), tester.promises))
+            print(len(x), x)
 
         self.assertEqual(5, len(tester.promises))
         for i in range(5):
